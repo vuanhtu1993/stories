@@ -1,8 +1,6 @@
-# [Anhtus Stories - Where TuVA tells all of you about react components, hooks, HOCs](https://reduction-admin.github.io/react-reduction/)
+import React from 'react';
+import {isFunction} from 'lodash'
 
-## Milestone
-* 1.Ngày 19/5 Investigate HOC detect width of screen withMediaQuery. More advance do it by hooks useMediaQuery
-```javascript
 const query = ({ width }) => {
   if (width < 575) {
     return { breakpoint: 'xs' };
@@ -59,4 +57,3 @@ const withMediaQuery = (query = query) => {
 }
 
 export default withMediaQuery;
-```

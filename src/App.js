@@ -7,6 +7,7 @@ import React from 'react';
 import componentQueries from 'react-component-queries';
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import './styles/reduction.scss';
+import withMediaQuery from './hocs/withMediaQuery';
 
 const AlertPage = React.lazy(() => import('pages/AlertPage'));
 const AuthModalPage = React.lazy(() => import('pages/AuthModalPage'));
@@ -31,6 +32,8 @@ const getBasename = () => {
 
 class App extends React.Component {
   render() {
+    const {...rest} = this.props;
+    console.log(rest)
     return (
       <BrowserRouter basename={getBasename()}>
         <GAListener>
@@ -107,5 +110,7 @@ const query = ({ width }) => {
 
   return { breakpoint: 'xs' };
 };
-
-export default componentQueries(query)(App);
+// componentQueries HOC return width of screen, có thể sử dụng event listener để lấy width
+// export default componentQueries(query)(App);
+// TODO: TuVA do the HOC detect width
+export default withMediaQuery(query)(App);
