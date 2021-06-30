@@ -4,10 +4,12 @@
   "private": false,
   "homepage": "https://vuanhtu1993.github.io/stories",
   "dependencies": {
+    "@zach.codes/react-calendar": "^0.2.0",
     "bootstrap": "4.3.1",
     "chart.js": "2.7.2",
     "classnames": "^2.2.6",
     "d3-geo": "^1.11.3",
+    "date-fns": "^2.22.1",
     "faker": "^4.1.0",
     "lodash": "^4.17.21",
     "prop-types": "^15.7.2",
@@ -25,6 +27,7 @@
     "react-simple-maps": "^0.12.1",
     "react-sizeme": "^2.5.2",
     "reactstrap": "^7.1.0",
+    "styled-components": "^5.3.0",
     "victory": "^32.0.0"
   },
   "devDependencies": {
