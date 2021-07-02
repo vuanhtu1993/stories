@@ -1,4 +1,4 @@
-import { STATE_LOGIN, STATE_SIGNUP } from 'components/AuthForm';
+import { STATE_LOGIN, STATE_SIGNUP } from 'components/Auth/AuthForm';
 import GAListener from 'components/GAListener';
 import { EmptyLayout, LayoutRoute, MainLayout } from 'components/Layout';
 import PageSpinner from 'components/PageSpinner';
@@ -34,7 +34,6 @@ const getBasename = () => {
 class App extends React.Component {
   render() {
     const {...rest} = this.props;
-    console.log(rest)
     return (
       <BrowserRouter basename={getBasename()}>
         <GAListener>

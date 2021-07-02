@@ -1,6 +1,8 @@
-import AuthForm, { STATE_LOGIN } from 'components/AuthForm';
 import React from 'react';
 import { Card, Col, Row } from 'reactstrap';
+
+import { STATE_LOGIN } from '../components/Auth/AuthForm.js';
+import Signup from '../components/Auth/Signup';
 
 class AuthPage extends React.Component {
   handleAuthState = authState => {
@@ -24,13 +26,7 @@ class AuthPage extends React.Component {
           alignItems: 'center',
         }}>
         <Col md={6} lg={4}>
-          <Card body>
-            <AuthForm
-              authState={this.props.authState}
-              onChangeAuthState={this.handleAuthState}
-              onLogoClick={this.handleLogoClick}
-            />
-          </Card>
+          <Signup/>
         </Col>
       </Row>
     );

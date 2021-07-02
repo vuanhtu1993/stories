@@ -1,4 +1,4 @@
-import AuthForm, { STATE_LOGIN } from 'components/AuthForm';
+import AuthForm, { STATE_LOGIN } from 'components/Auth/AuthForm';
 import Page from 'components/Page';
 import React from 'react';
 import {
